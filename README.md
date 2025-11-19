@@ -5,13 +5,13 @@ Incluye búsqueda, detalle de juegos, lista de favoritos persistente y navegaci�
 
 ---
 
-## 📌 1. Descripción general de la app
+## 1. Descripción general de la app
 
 **Gamepedia App** permite:
 
-- 🎮 Ver una lista de juegos populares.
-- 🔎 Buscar videojuegos por nombre.
-- 📄 Consultar detalles completos de cada juego:
+- Ver una lista de juegos populares.
+- Buscar videojuegos por nombre.
+- Consultar detalles completos de cada juego:
   - Imagen
   - Rating
   - Metacritic
@@ -19,16 +19,16 @@ Incluye búsqueda, detalle de juegos, lista de favoritos persistente y navegaci�
   - Géneros
   - Desarrollador
   - Descripción
-- ⭐ Guardar y gestionar juegos favoritos (persistentes con Hive).
-- 📱 Navegar entre pantallas (Home, Favoritos, Acerca de).
+- Guardar y gestionar juegos favoritos (persistentes con Hive).
+- Navegar entre pantallas (Home, Favoritos, Acerca de).
 
 El proyecto integra navegación, consumo de API, manejo de estado y base de datos local.
 
 ---
 
-## 📌 2. Patrones de diseño utilizados
+## 2. Patrones de diseño utilizados
 
-### 🧱 Clean Architecture (adaptada)
+### Clean Architecture (adaptada)
 
 El proyecto está dividido en capas:
 
@@ -41,7 +41,7 @@ Separar responsabilidades, mejorar la escalabilidad y mantener el código organi
 
 ---
 
-### 📁 Repository Pattern
+### Repository Pattern
 
 Se utiliza un repositorio (`GameRepository`) para manejar la obtención de datos.
 
@@ -53,7 +53,7 @@ Se utiliza un repositorio (`GameRepository`) para manejar la obtención de datos
 
 ---
 
-### 🧩 Dependency Injection (GetIt)
+### Dependency Injection (GetIt)
 
 Los servicios se registran así:
 
@@ -70,7 +70,7 @@ Evita crear instancias repetidas y centraliza dependencias.
 
 ---
 
-### 🔄 Provider – Manejo de estado
+### Provider – Manejo de estado
 
 La UI reacciona automáticamente a cambios usando:
 
@@ -85,7 +85,7 @@ Simple, eficiente y recomendado oficialmente en Flutter.
 
 ---
 
-## 📌 3. Manejo de estado
+## 3. Manejo de estado
 
 Se utiliza:
 
@@ -105,9 +105,9 @@ Esto permite:
 
 ---
 
-## 📌 4. Persistencia y consumo de datos
+## 4. Persistencia y consumo de datos
 
-### 🌐 Consumo de API REST (RAWG.io)
+### Consumo de API REST (RAWG.io)
 
 Funciones implementadas:
 
@@ -133,7 +133,7 @@ Los datos se procesan en:
 
 ---
 
-### 💾 Persistencia local con Hive
+### Persistencia local con Hive
 
 Se abre un box:
 
@@ -152,7 +152,7 @@ Los favoritos son persistentes incluso al cerrar la app.
 
 ---
 
-## 📌 5. Base de datos local
+## 5. Base de datos local
 
 Se usa **Hive**, una base de datos rápida y liviana, ideal para dispositivos móviles.
 
@@ -164,7 +164,7 @@ Accedido mediante `FavoritesProvider`.
 
 ---
 
-## 📌 6. Instrucciones para ejecutar el proyecto
+## 6. Instrucciones para ejecutar el proyecto
 
 1️⃣ Clonar el repositorio
 
@@ -212,7 +212,7 @@ flutter run
 
 ---
 
-## 📌 7. Pantallas principales
+## 7. Pantallas principales
 
 - **Home:** Lista de juegos + barra de búsqueda.
 - **Detalle:** Información completa del juego.

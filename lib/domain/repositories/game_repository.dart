@@ -3,6 +3,7 @@ import '../entities/game.dart';
 abstract class GameRepository {
   Future<List<Game>> getPopularGames();
   Future<Game> getGameDetail(int id);
+  Future<List<Game>> searchGames(String query);
 }
 
 

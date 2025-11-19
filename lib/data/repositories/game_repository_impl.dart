@@ -26,4 +26,12 @@ class GameRepositoryImpl implements GameRepository {
 
     return GameDetailModel.fromJson(json).toEntity();
   }
+
+  @override
+  Future<List<Game>> searchGames(String query) async {
+    final json = await api.searchGames(query);
+    final results = json["results"] as List;
+
+    return results.map((e) => GameModel.fromJson(e).toEntity()).toList();
+  }
 }

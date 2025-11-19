@@ -71,7 +71,27 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      body: _buildBody(provider),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Buscar juego...",
+                prefixIcon: const Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              onChanged: (text) {
+                context.read<GameListProvider>().search(text);
+              },
+            ),
+          ),
+
+          Expanded(child: _buildBody(provider)),
+        ],
+      ),
     );
   }
 

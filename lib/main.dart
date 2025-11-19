@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:gamerpedia_app/domain/usecases/search_games.dart';
 import 'package:gamerpedia_app/presentation/providers/game_detail_provider.dart';
 import 'package:gamerpedia_app/presentation/providers/game_list_provider.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +26,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox('favorites');
   getIt.registerLazySingleton(() => GameApiService());
-
+  getIt.registerLazySingleton(() => SearchGames(getIt<GameRepository>()));
   getIt.registerLazySingleton<GameRepository>(
     () => GameRepositoryImpl(getIt<GameApiService>()),
   );

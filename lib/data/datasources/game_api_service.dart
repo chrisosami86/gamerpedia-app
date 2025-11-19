@@ -18,4 +18,18 @@ class GameApiService {
 
     return jsonDecode(response.body);
   }
+
+  Future<Map<String, dynamic>> searchGames(String query) async {
+    final apiKey = dotenv.env['RAWG_API_KEY'];
+
+    final url = Uri.parse("$baseUrl/games?search=$query&key=$apiKey");
+
+    final response = await http.get(url);
+
+    if (response.statusCode != 200) {
+      throw Exception("Error al buscar juegos");
+    }
+
+    return jsonDecode(response.body);
+  }
 }

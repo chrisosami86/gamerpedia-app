@@ -68,6 +68,8 @@ getIt.registerLazySingleton(() => SearchGames(getIt()));
 
 Evita crear instancias repetidas y centraliza dependencias.
 
+---
+
 ### 🔄 Provider – Manejo de estado
 
 La UI reacciona automáticamente a cambios usando:
@@ -80,6 +82,8 @@ La UI reacciona automáticamente a cambios usando:
 
 **Ventajas:**
 Simple, eficiente y recomendado oficialmente en Flutter.
+
+---
 
 ## 📌 3. Manejo de estado
 
@@ -98,6 +102,8 @@ Esto permite:
 - Actualizar listas de juegos.
 
 - Sincronizar favoritos con Hive.
+
+---
 
 ## 📌 4. Persistencia y consumo de datos
 
@@ -125,6 +131,8 @@ Los datos se procesan en:
 
 - GameModel
 
+---
+
 ### 💾 Persistencia local con Hive
 
 Se abre un box:
@@ -142,6 +150,8 @@ favoritesBox.delete(id);
 
 Los favoritos son persistentes incluso al cerrar la app.
 
+---
+
 ## 📌 5. Base de datos local
 
 Se usa **Hive**, una base de datos rápida y liviana, ideal para dispositivos móviles.
@@ -151,6 +161,8 @@ Datos almacenados:
 - Lista de IDs de juegos favoritos.
 
 Accedido mediante `FavoritesProvider`.
+
+---
 
 ## 📌 6. Instrucciones para ejecutar el proyecto
 
@@ -190,11 +202,15 @@ RAWG_API_KEY=tu_api_key_aqui
 La API Key se obtiene gratis en:
 https://rawg.io/apidocs
 
-4️⃣ Ejecutar el proyecto
+---
+
+### 4️⃣ Ejecutar el proyecto
 
 ```bash
 flutter run
 ```
+
+---
 
 ## 📌 7. Pantallas principales
 

@@ -214,7 +214,7 @@ flutter run
 
 ## 📌 7. Pantallas principales
 
-**Home:** Lista de juegos + barra de búsqueda.
-**Detalle:** Información completa del juego.
-**Favoritos:** Juegos guardados localmente.
-**Acerca de:** Información del desarrollador y del curso.
+- **Home:** Lista de juegos + barra de búsqueda.
+- **Detalle:** Información completa del juego.
+- **Favoritos:** Juegos guardados localmente.
+- **Acerca de:** Información del desarrollador y del curso.

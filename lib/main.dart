@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:gamerpedia_app/presentation/providers/game_detail_provider.dart';
 import 'package:gamerpedia_app/presentation/providers/game_list_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => FavoritesProvider()),
         ChangeNotifierProvider(create: (_) => GameListProvider()..loadGames()),
+        ChangeNotifierProvider(create: (_) => GameDetailProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

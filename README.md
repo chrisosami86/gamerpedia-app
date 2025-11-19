@@ -1,4 +1,4 @@
-# 🎮 Gamepedia App
+# 🎮 Gamerpedia App
 
 Aplicación móvil desarrollada en **Flutter** para consultar información de videojuegos usando la API pública **RAWG.io**.  
 Incluye búsqueda, detalle de juegos, lista de favoritos persistente y navegación entre pantallas.
@@ -7,7 +7,7 @@ Incluye búsqueda, detalle de juegos, lista de favoritos persistente y navegaci�
 
 ## 1. Descripción general de la app
 
-**Gamepedia App** permite:
+**Gamerpedia App** permite:
 
 - Ver una lista de juegos populares.
 - Buscar videojuegos por nombre.

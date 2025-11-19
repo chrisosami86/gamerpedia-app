@@ -46,7 +46,7 @@ class GameCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 20,
                 ),
               ),
             ),
@@ -59,7 +59,7 @@ class GameCard extends StatelessWidget {
                   game.platforms!.join(" | "),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                  style: TextStyle(fontSize: 14, color: Colors.grey[800]),
                 ),
               ),
 

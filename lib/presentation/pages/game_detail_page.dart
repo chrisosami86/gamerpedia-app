@@ -78,7 +78,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
           // Nombre
           Text(
             game.name,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 8),
@@ -87,7 +87,11 @@ class _GameDetailPageState extends State<GameDetailPage> {
           if (game.rating != null || game.metacritic != null)
             Row(
               children: [
-                if (game.rating != null) Text("⭐ ${game.rating}  "),
+                if (game.rating != null)
+                  Text(
+                    "⭐ ${game.rating}  ",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                 if (game.metacritic != null)
                   Container(
                     padding: const EdgeInsets.symmetric(
@@ -100,7 +104,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
                     ),
                     child: Text(
                       "Metacritic: ${game.metacritic}",
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
               ],
@@ -112,7 +116,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
           if (game.genres != null)
             Text(
               "Géneros: ${game.genres!.join(", ")}",
-              style: const TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 20),
             ),
 
           const SizedBox(height: 8),
@@ -121,7 +125,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
           if (game.platforms != null)
             Text(
               "Plataformas: ${game.platforms!.join(", ")}",
-              style: const TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
           const SizedBox(height: 8),
@@ -130,7 +134,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
           if (game.esrbRating != null)
             Text(
               "Clasificación ESRB: ${game.esrbRating}",
-              style: const TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 20),
             ),
 
           const SizedBox(height: 8),
@@ -139,7 +143,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
           if (game.developer != null)
             Text(
               "Desarrolladora: ${game.developer}",
-              style: const TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
           const SizedBox(height: 16),
@@ -148,7 +152,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
           if (game.description != null)
             Text(
               game.description!,
-              style: const TextStyle(fontSize: 15, height: 1.4),
+              style: const TextStyle(fontSize: 18, height: 1.4),
             ),
 
           const SizedBox(height: 20),
